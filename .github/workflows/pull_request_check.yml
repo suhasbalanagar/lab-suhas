@@ -1,0 +1,19 @@
+name: Pull_req_check
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+
+      - name: print course name
+
+        env:
+          COURSE_NAME: Cloud Computing
+        
+        run: echo $COURSE_NAME
